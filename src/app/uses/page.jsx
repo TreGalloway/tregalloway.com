@@ -47,7 +47,7 @@ export default function Uses() {
         </ToolsSection>
         <ToolsSection title="Development tools">
           <Tool title="VSCode">
-            I don't feel like spending time I could be coding configuring NeoVim
+            I don’t feel like spending time I could be coding configuring NeoVim
             instead.
           </Tool>
           <Tool title="Warp">
