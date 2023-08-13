@@ -291,8 +291,8 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-            <Resume />
+            {/* <Newsletter />
+            <Resume /> */}
           </div>
         </div>
       </Container>
