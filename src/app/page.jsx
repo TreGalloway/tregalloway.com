@@ -255,7 +255,7 @@ export default async function Home() {
             Fullstack Developer, writer, and avid reader.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Tre’ Galloway, a Fullstack Developer and writer based in New
+            I’m Tre’ Galloway, a software Developer and writer based in New
             Orleans (for now).
           </p>
           <div className="mt-6 flex gap-6">
