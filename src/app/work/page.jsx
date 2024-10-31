@@ -11,39 +11,28 @@ import logoDigiPen from '@/images/logos/digipen.svg'
 
 const projects = [
   {
-    name: 'Digipen',
+    name: 'Tconnect - Helping Recuiters',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
+      'A platform that helps recruiters build a strong network of candidates. Currently in progress.',
     link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoDigiPen,
-  },
-  {
-    name: 'XXX- Raycast Extension',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
-  },
-  {
-    name: 'Gs Drizzle',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'MyDocs',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
     logo: logoCosmos,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Planni',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Planni is a CLI tool that automates development tasks by monitoring files, analyzing context, and managing task execution from the terminal.',
+    link: {
+      href: 'https://github.com/TreGalloway/planni',
+      label: 'github.com',
+    },
+    logo: logoAnimaginary,
+  },
+  {
+    name: '1feed',
+    description:
+      'A lightweight, distraction-free content aggregator that uses HTMX and Go to efficiently fetch and display your favorite YouTube videos, tweets, blogs, and newsletters in a single, server-rendered feed.',
+    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+    logo: logoPlanetaria,
   },
 ]
 
@@ -67,7 +56,7 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      intro="These are some products I've built and continue to maintain. I'm always looking for new opportunities to collaborate and learn from others. Feel free to reach out if you have any questions or just want to chat."
     >
       <ul
         role="list"
