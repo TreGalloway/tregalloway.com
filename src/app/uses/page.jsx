@@ -32,7 +32,7 @@ export default function Uses() {
   return (
     <SimpleLayout
       title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      intro="Here are some of the tools, gadgets, and software I use on a daily basis and think you might enjoy too."
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
@@ -46,39 +46,49 @@ export default function Uses() {
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
-          <Tool title="VSCode">
-            I don’t feel like spending time I could be coding configuring NeoVim
-            instead.
+          <Tool title="Zed">
+            It’s a simple code editor that I use for most of my coding needs
+            with vim bindings.
           </Tool>
-          <Tool title="Warp">
-            Used to use Iterm2 but found Warp to be better for my terminal
+          <Tool title="Polypane">
+            I use this for testing responsive design. It’s a great tool for web
+            development, you can see how your site looks on different
+            devices.Has a lot of features that I haven’t even touched yet.
+          </Tool>
+          <Tool title="Wezterm">
+            Used to use Iterm2 but found Wezterm to be better for my terminal
             needs.
+          </Tool>
+          <Tool title="Fly.io">
+            I use this for hosting my personal projects. It’s a great service
+            for quickly deploying apps.
           </Tool>
           <Tool title="Docker">
             Recently started to learn and use. Will update when I figure it out
             more.
           </Tool>
-        </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">Learning more about UX design.</Tool>
+          <Tool title="Go-Blueprint">
+            I use this for generating boilerplate code for my Go projects. Made
+            by Melkey, check him out on Twitch and YouTube.
+          </Tool>
         </ToolsSection>
         <ToolsSection title="Productivity">
           <Tool title="Raycast">
             It’s the best spotlight alternative. So many features to assist
             anyones workflow.
           </Tool>
-          <Tool title="Mem">
-            I’ve used most note taking apps out their and landed on mem ai. I
-            like quickly jotting notes, its search, and ai implementation.
+          <Tool title="Raycast Notes">
+            I use this for quick notes and todos. It’s a great way to keep focus
+            on the task at hand while jotting down quick notes.
           </Tool>
-          <Tool title="Readwise/Reader">
-            Readwise takes highlights from kindle books, its Reader app (super
-            cool read later/feed app), and a bunch more sources together in a
-            nice organized way.
+          <Tool title="Raindrop">
+            Bookmark manager that I use to save articles, videos, and other
+            things I want to read later.
           </Tool>
-          <Tool title="Notion">
-            A good tool for many work related tasks. Currently using for coding
-            projects.
+          <Tool title="Sofa">
+            I use this for tracking my TV shows and movies. It’s a great way to
+            keep track of what I’m watching, reading, and adding things I want
+            to get into.
           </Tool>
           <Tool title="Things 3">Simple and clean personal task manager.</Tool>
         </ToolsSection>
