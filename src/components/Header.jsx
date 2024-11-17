@@ -11,6 +11,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
 import Profile_pic from '@/images/Profile_pic.jpg'
+import Profile_pic_memoji from '@/images/Profile_pic_memoji.jpg'
 
 function CloseIcon(props) {
   return (
@@ -225,7 +226,7 @@ function Avatar({ large = false, className, ...props }) {
       {...props}
     >
       <Image
-        src={Profile_pic}
+        src={Profile_pic_memoji}
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
