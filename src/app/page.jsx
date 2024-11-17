@@ -10,6 +10,8 @@ import {
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
+  BlueskyIcon,
+  YouTubeIcon,
 } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
@@ -252,11 +254,11 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Fullstack Developer, writer, and avid reader.
+            Tre Galloway
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Tre’ Galloway, a software Developer and writer based in New
-            Orleans (for now).
+            Turning problems into solutions with design and code. While reading
+            a little too much fantasy.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -265,9 +267,15 @@ export default async function Home() {
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com/bytregalloway"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
+              href="https://bsky.app/profile/tregalloway.bsky.social"
+              aria-label="Follow on Bluesky"
+              icon={BlueskyIcon}
+            />
+
+            <SocialLink
+              href="https://youtube.com/@TreGalloway"
+              aria-label="Follow on YouTube"
+              icon={YouTubeIcon}
             />
             <SocialLink
               href="https://github.com/TreGalloway"
@@ -282,6 +290,7 @@ export default async function Home() {
           </div>
         </div>
       </Container>
+
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
@@ -291,8 +300,8 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            {/* <Newsletter />
-            <Resume /> */}
+            <Newsletter />
+            <Resume />
           </div>
         </div>
       </Container>
