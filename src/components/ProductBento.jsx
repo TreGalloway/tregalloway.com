@@ -13,7 +13,7 @@ import {
 
 export function ProductBentoBox() {
   return (
-    <BentoGrid className="sm:max-x-sm mx-auto md:auto-rows-[20rem] ">
+    <BentoGrid className="mx-auto max-w-5xl  md:auto-rows-[20rem] ">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
