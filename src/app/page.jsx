@@ -258,8 +258,8 @@ export default async function Home() {
             Tre Galloway
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Turning problems into solutions with design and code. While reading
-            a little too much fantasy.
+            Turning problems into solutions with code. While reading a little
+            too much fantasy.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -294,7 +294,7 @@ export default async function Home() {
       <div className="mt-16 sm:mt-8 ">
         <ProductBentoBox />
       </div>
-      <Photos />
+
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
@@ -304,7 +304,7 @@ export default async function Home() {
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
-            <Resume />
+            {/*<Resume /> */}
           </div>
         </div>
       </Container>
