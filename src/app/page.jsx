@@ -7,7 +7,6 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
   BlueskyIcon,
@@ -258,8 +257,10 @@ export default async function Home() {
             Tre Galloway
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Turning problems into solutions with code. While reading a little
-            too much fantasy.
+            Crafting code solutions with a touch of magic. An indie developer
+            fueled by imagination and a healthy dose of fantasy, ready to turn
+            your problems into digital realities. Let's build something amazing
+            together.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
