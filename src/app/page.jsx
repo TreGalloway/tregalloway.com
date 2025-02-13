@@ -293,7 +293,7 @@ export default async function Home() {
         </div>
       </Container>
       <div className="mt-16 sm:mt-8 ">
-        <ProductBentoBox />
+        {/* <ProductBentoBox /> need to finsih some products before I have this */}
       </div>
 
       <Container className="mt-24 md:mt-28">
@@ -304,7 +304,7 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/* <Newsletter /> until I start on up*/}
             {/*<Resume /> */}
           </div>
         </div>
