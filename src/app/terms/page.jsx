@@ -1,6 +1,4 @@
-import React from 'react'
-
-const TermsOfService = () => {
+export default function Terms() {
   return (
     <div className="bg-transparent">
       <div className="mb-12 flex justify-center">
@@ -532,5 +530,3 @@ const TermsOfService = () => {
     </div>
   )
 }
-
-export default TermsOfService

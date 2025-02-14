@@ -25,6 +25,7 @@ export function Footer() {
                 <NavLink href="/products">Products</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
                 <NavLink href="/terms">Terms</NavLink>
+                <NavLink href="/privacy">Privacy</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} Tre Galloway. All rights
