@@ -48,11 +48,11 @@ function LinkIcon(props) {
 }
 
 export const metadata = {
-  title: 'Projects',
+  title: 'Products',
   description: 'Things I’ve made trying to put my dent in the universe.',
 }
 
-export default function Projects() {
+export default function Products() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."

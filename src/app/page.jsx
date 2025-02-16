@@ -256,7 +256,7 @@ export default async function Home() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Tre Galloway
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
             Crafting code solutions with a touch of magic. An indie developer
             fueled by imagination and a healthy dose of fantasy, ready to turn
             your problems into digital realities. Lets build something amazing
@@ -298,11 +298,11 @@ export default async function Home() {
 
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
+          {/* <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
-          </div>
+          </div> */}
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* <Newsletter /> until I start on up*/}
             {/*<Resume /> */}
