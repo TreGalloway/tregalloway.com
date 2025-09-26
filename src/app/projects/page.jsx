@@ -11,28 +11,21 @@ import logoDigiPen from '@/images/logos/digipen.svg'
 
 const projects = [
   {
-    name: 'Tconnect - Helping Recuiters',
+    name: 'Azure NLP Copilot',
     description:
-      'A platform that helps recruiters build a strong network of candidates. Currently in progress.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+      '',
+    link: { href: 'https://github.com/TreGalloway/azure-copilot', label: 'github.com' },
     logo: logoCosmos,
   },
   {
-    name: 'Planni',
+    name: 'Azure Hybrid Lab',
     description:
-      'Planni is a CLI tool that automates development tasks by monitoring files, analyzing context, and managing task execution from the terminal.',
+      '',
     link: {
-      href: 'https://github.com/TreGalloway/planni',
+      href: 'https://github.com/TreGalloway/azure-lab',
       label: 'github.com',
     },
     logo: logoAnimaginary,
-  },
-  {
-    name: '1feed',
-    description:
-      'A lightweight, distraction-free content aggregator that uses HTMX and Go to efficiently fetch and display your favorite YouTube videos, tweets, blogs, and newsletters in a single, server-rendered feed.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
   },
 ]
 
@@ -48,15 +41,15 @@ function LinkIcon(props) {
 }
 
 export const metadata = {
-  title: 'Products',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  title: 'Projects',
+  description: 'Things I\'ve made trying to put my dent in the universe.',
 }
 
-export default function Products() {
+export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="These are some products I've built and continue to maintain. I'm always looking for new opportunities to collaborate and learn from others. Feel free to reach out if you have any questions or just want to chat."
+      intro="These are some projects I've built and continue to maintain. I'm always looking for new opportunities to collaborate and learn from others. Feel free to reach out if you have any questions or just want to chat."
     >
       <ul
         role="list"
