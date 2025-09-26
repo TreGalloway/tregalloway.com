@@ -257,10 +257,8 @@ export default async function Home() {
             Tre Galloway
           </h1>
           <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-            Crafting code solutions with a touch of magic. An indie developer
-            fueled by imagination and a healthy dose of fantasy, ready to turn
-            your problems into digital realities. Lets build something amazing
-            together.
+            Aspiring AI engineer passionate about building the future of technology. Currently seeking my first tech role while deepening my expertise in machine learning and software development.
+When I'm not coding, you'll find me lost in a good fantasy book 📚🧙🏾‍♂️
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
