@@ -256,9 +256,11 @@ export default async function Home() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Tre Galloway
           </h1>
-          <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-            Aspiring AI engineer passionate about building the future of technology. Currently seeking my first tech role while deepening my expertise in machine learning and software development.
-When I'm not coding, you'll find me lost in a good fantasy book 📚🧙🏾‍♂️
+          <p className="mt-6 text-xl text-zinc-600 dark:text-zinc-400">
+            Aspiring AI engineer passionate about building the future of
+            technology. Currently seeking my first tech role while deepening my
+            expertise in machine learning and software development. When I'm not
+            coding, you'll find me lost in a good fantasy book 📚🧙🏾‍♂️
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

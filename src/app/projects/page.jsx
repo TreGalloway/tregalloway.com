@@ -4,29 +4,37 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
+import logoAzure from '@/images/logos/azure.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoDigiPen from '@/images/logos/digipen.svg'
-
+import logoBrain from '@/images/logos/brain.svg'
+import logoAzureIcon from '@/images/logos/azure-icon.svg'
 const projects = [
   {
     name: 'Azure NLP Copilot',
     description:
-      '',
+      'An intelligent Python-based CLI assistant that translates natural language commands into Azure CLI operations, making cloud resource management more intuitive and accessible.',
     link: { href: 'https://github.com/TreGalloway/azure-copilot', label: 'github.com' },
-    logo: logoCosmos,
+    logo: logoAzureIcon,
   },
   {
     name: 'Azure Hybrid Lab',
     description:
-      '',
+      'Secure Hybrid Network Lab - Automated hands-on project simulating hybrid cloud connectivity between on-premises VM and Azure VNet via site-to-site VPN. Built with Azure Python SDK including full lifecycle management and teardown scripts.',
     link: {
       href: 'https://github.com/TreGalloway/azure-lab',
       label: 'github.com',
     },
-    logo: logoAnimaginary,
+    logo: logoAzureIcon,
   },
+  {
+    name: "Lunna",
+    description: "AI + Learning designed for ADHD folks, helping them learn and focus better. It uses AI to create personalized learning plans and track progress. Long Term Work in progress.🚣🏾‍♀️",
+    logo: logoBrain,
+    link: { href: 'https://github.com/TreGalloway/lunna', label: 'github.com' },
+  }
 ]
 
 function LinkIcon(props) {
@@ -48,8 +56,8 @@ export const metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="These are some projects I've built and continue to maintain. I'm always looking for new opportunities to collaborate and learn from others. Feel free to reach out if you have any questions or just want to chat."
+      title="Things I’m making trying to put my dent in the universe."
+      intro="Things I'm creating to learn new skills and drive meaningful impact in areas that matter to me."
     >
       <ul
         role="list"
@@ -57,11 +65,11 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-8"
+                className="w-8 h-8"
                 unoptimized
               />
             </div>
@@ -69,8 +77,8 @@ export default function Projects() {
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
+            <p className="relative z-10 flex mt-6 text-sm font-medium transition text-zinc-400 group-hover:text-teal-500 dark:text-zinc-200">
+              <LinkIcon className="flex-none w-6 h-6" />
               <span className="ml-2">{project.link.label}</span>
             </p>
           </Card>
