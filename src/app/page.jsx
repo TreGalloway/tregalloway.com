@@ -11,6 +11,7 @@ import {
   TwitterIcon,
   BlueskyIcon,
   YouTubeIcon,
+  MastadonIcon
 } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
@@ -136,85 +137,82 @@ function Newsletter() {
   )
 }
 
-function Resume() {
-  let resume = [
+function SparklesIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M12 3L13.5 8.5L19 10L13.5 11.5L12 17L10.5 11.5L5 10L10.5 8.5L12 3Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <path
+        d="M19 3L19.75 5.25L22 6L19.75 6.75L19 9L18.25 6.75L16 6L18.25 5.25L19 3Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <path
+        d="M19 15L19.75 17.25L22 18L19.75 18.75L19 21L18.25 18.75L16 18L18.25 17.25L19 15Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function CurrentInterests() {
+  let activities = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      category: 'Building',
+      description: 'Azure NLP copilot',
+      icon: '💻',
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      category: 'Reading',
+      description: 'AI Engineering by Chip Huyen',
+      icon: '📖',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      category: 'Listening',
+      description: 'Dungeon Crawler Carl (restart)',
+      icon: '🎧',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      category: 'Learning',
+      description: 'The Official Raspberry Pi Handbook 2026',
+      icon: '🔧',
     },
   ]
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <SparklesIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Current Interests</span>
       </h2>
-      <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <li key={roleIndex} className="flex gap-4">
+      <ul className="mt-6 space-y-4">
+        {activities.map((activity, index) => (
+          <li key={index} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <span className="text-xl">{activity.icon}</span>
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">Company</dt>
+              <dt className="sr-only">Category</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
+                {activity.category}
               </dd>
-              <dt className="sr-only">Role</dt>
+              <dt className="sr-only">Description</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                {role.title}
-              </dd>
-              <dt className="sr-only">Date</dt>
-              <dd
-                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
-              >
-                <time dateTime={role.start.dateTime ?? role.start}>
-                  {role.start.label ?? role.start}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={role.end.dateTime ?? role.end}>
-                  {role.end.label ?? role.end}
-                </time>
+                {activity.description}
               </dd>
             </dl>
           </li>
         ))}
-      </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </ul>
     </div>
   )
 }
@@ -252,43 +250,53 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Tre Galloway
-          </h1>
-          <p className="mt-6 text-xl text-zinc-600 dark:text-zinc-400">
-            Aspiring AI engineer passionate about building the future of
-            technology. Currently seeking my first tech role while deepening my
-            expertise in machine learning and software development. When I'm not
-            coding, you'll find me lost in a good fantasy book 📚🧙🏾‍♂️
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/bytregalloway"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://bsky.app/profile/tregalloway.bsky.social"
-              aria-label="Follow on Bluesky"
-              icon={BlueskyIcon}
-            />
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-8 lg:max-w-none lg:grid-cols-2 lg:gap-x-8">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              Tre Galloway
+            </h1>
+            <p className="mt-6 text-xl text-zinc-600 dark:text-zinc-400">
+              Aspiring AI engineer passionate about building the future of
+              technology. Currently seeking my first tech role while deepening my
+              expertise in machine learning and software development. When I'm not
+              coding, you'll find me lost in a good fantasy book 📚🧙🏾‍♂️
+            </p>
+            <div className="mt-6 flex gap-6">
+              <SocialLink
+                href="https://twitter.com/bytregalloway"
+                aria-label="Follow on Twitter"
+                icon={TwitterIcon}
+              />
+              <SocialLink
+                href="https://bsky.app/profile/tregalloway.bsky.social"
+                aria-label="Follow on Bluesky"
+                icon={BlueskyIcon}
+              />
+              <SocialLink
+                href="https://mastodon.social/@tregalloway"
+                aria-label="Follow on Mastadon"
+                icon={MastadonIcon}
+              />
 
-            <SocialLink
-              href="https://youtube.com/@TreGalloway"
-              aria-label="Follow on YouTube"
-              icon={YouTubeIcon}
-            />
-            <SocialLink
-              href="https://github.com/TreGalloway"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/tregalloway/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+              <SocialLink
+                href="https://youtube.com/@TreGalloway"
+                aria-label="Follow on YouTube"
+                icon={YouTubeIcon}
+              />
+              <SocialLink
+                href="https://github.com/TreGalloway"
+                aria-label="Follow on GitHub"
+                icon={GitHubIcon}
+              />
+              <SocialLink
+                href="https://www.linkedin.com/in/tregalloway/"
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+              />
+            </div>
+          </div>
+          <div className="lg:pl-16 xl:pl-24">
+            <CurrentInterests />
           </div>
         </div>
       </Container>
@@ -305,7 +313,6 @@ export default async function Home() {
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* <Newsletter /> until I start on up*/}
-            {/* <Resume /> */}
           </div>
         </div>
       </Container>
