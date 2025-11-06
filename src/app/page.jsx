@@ -13,11 +13,7 @@ import {
   YouTubeIcon,
   MastadonIcon
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
+
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
@@ -103,7 +99,7 @@ function Article({ article }) {
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-emerald-600 dark:fill-zinc-400 dark:group-hover:fill-emerald-600" />
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-emerald-600 dark:fill-zinc-400 dark:group-hover:fill-sky-600" />
     </Link>
   )
 }
@@ -150,15 +146,15 @@ function SparklesIcon(props) {
     >
       <path
         d="M12 3L13.5 8.5L19 10L13.5 11.5L12 17L10.5 11.5L5 10L10.5 8.5L12 3Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+        className="fill-sky-100 stroke-sky-400 dark:fill-sky-100/10 dark:stroke-sky-500"
       />
       <path
         d="M19 3L19.75 5.25L22 6L19.75 6.75L19 9L18.25 6.75L16 6L18.25 5.25L19 3Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+        className="fill-sky-100 stroke-sky-400 dark:fill-sky-100/10 dark:stroke-sky-500"
       />
       <path
         d="M19 15L19.75 17.25L22 18L19.75 18.75L19 21L18.25 18.75L16 18L18.25 17.25L19 15Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+        className="fill-sky-100 stroke-sky-400 dark:fill-sky-100/10 dark:stroke-sky-500"
       />
     </svg>
   )
@@ -191,13 +187,13 @@ function CurrentInterests() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <SparklesIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Current Interests</span>
+        <SparklesIcon className="h-6 w-6 flex-none " />
+        <span className="ml-3 text-amber-600 dark:text-amber-500 font-light text-xl">Current Interests</span>
       </h2>
       <ul className="mt-6 space-y-4">
         {activities.map((activity, index) => (
           <li key={index} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-sky-800/5 ring-1 ring-sky-900/5 dark:border dark:border-sky-700/50 dark:bg-sky-800 dark:ring-0">
               <span className="text-xl">{activity.icon}</span>
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -206,7 +202,7 @@ function CurrentInterests() {
                 {activity.category}
               </dd>
               <dt className="sr-only">Description</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+              <dd className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 {activity.description}
               </dd>
             </dl>
@@ -252,14 +248,14 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-8 lg:max-w-none lg:grid-cols-2 lg:gap-x-8">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 className="text-4xl font-light tracking-tight text-amber-600 dark:text-amber-500 sm:text-5xl">
               Tre Galloway
             </h1>
             <p className="mt-6 text-xl text-zinc-600 dark:text-zinc-400">
-              Aspiring AI engineer passionate about building the future of
-              technology. Currently seeking my first tech role while deepening my
-              expertise in machine learning and software development. When I'm not
-              coding, you'll find me lost in a good fantasy book 📚🧙🏾‍♂️
+              Just a overly curious man with access to the internet. When I'm not
+              tinkering you'll find me lost in a good fantasy book 📚🧙🏾‍♂️.
+              <br />
+              <a className='font-light text-sky-700 dark:text-sky-500 '>Networking - Electronics - Coding - AI</a>
             </p>
             <div className="mt-6 flex gap-6">
               <SocialLink
@@ -295,7 +291,7 @@ export default async function Home() {
               />
             </div>
           </div>
-          <div className="lg:pl-16 xl:pl-24">
+          <div className="lg:pl-14 xl:pl-16">
             <CurrentInterests />
           </div>
         </div>

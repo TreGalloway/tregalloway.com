@@ -17,10 +17,10 @@ export function Footer() {
   return (
     <footer className="mt-32 flex-none">
       <Container.Outer>
-        <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
+        <div className="border-t border-border pb-16 pt-10">
           <Container.Inner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-foreground">
                 {/* <NavLink href="/about">About</NavLink> */}
                 {/* <NavLink href="/articles">Articles</NavLink> */}
                 <NavLink href="/products">Projects</NavLink>
@@ -29,7 +29,7 @@ export function Footer() {
                 <NavLink href="/privacy">Privacy</NavLink>
                 <NavLink href="/refund">Refund</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
+              <p className="text-sm text-muted-foreground">
                 &copy; {new Date().getFullYear()} Tre Galloway. All rights
                 reserved.
               </p>
